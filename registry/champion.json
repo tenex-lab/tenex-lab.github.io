@@ -24,7 +24,7 @@
   "max_drawdown_pct": -0.0454938865385945,
   "equity_final": 100203.25166,
   "eval_days": 5,
-  "run_ts": "2026-06-01T19:13:09",
+  "run_ts": "2026-06-02T08:27:05",
   "days_lookback": 45,
   "fee_bps_per_side": 1.0,
   "qty": 10,
@@ -32,12 +32,5 @@
   "tp": 0.01,
   "sl": 0.005,
   "p_enter": 0.6,
-  "crowned_at": "2026-06-02T07:48:11.530529-04:00",
-  "dethroned": {
-    "model_id": "ote_long",
-    "version": "5.1.1.1",
-    "symbol": "SOXL",
-    "avg_daily_roi_pct": 0.2590964087802805,
-    "crowned_at": "2026-05-13T16:42:38.358378-04:00"
-  }
+  "crowned_at": "2026-06-02T07:48:11.530529-04:00"
 }
