@@ -23,6 +23,7 @@ secrets.json
 # Claude local settings
 # -------------------------------------------------------
 .claude/
+CLAUDE.md
 
 # -------------------------------------------------------
 # Generated / large outputs
