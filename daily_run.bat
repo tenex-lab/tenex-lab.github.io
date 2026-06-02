@@ -14,4 +14,18 @@ git add registry/all_results.csv registry/champion.json registry/run_log.csv doc
 git commit -m "Daily run: %DATESTR%" >> %LOGFILE% 2>&1
 git push origin main >> %LOGFILE% 2>&1
 
+:: Push engine code to private repo
+git checkout engine >> %LOGFILE% 2>&1
+git add -A >> %LOGFILE% 2>&1
+git diff --cached --quiet || git commit -m "Engine update: %DATESTR%" >> %LOGFILE% 2>&1
+git push private engine:main >> %LOGFILE% 2>&1
+git checkout main >> %LOGFILE% 2>&1
+
+:: Push research code to research repo
+git checkout research >> %LOGFILE% 2>&1
+git add -A >> %LOGFILE% 2>&1
+git diff --cached --quiet || git commit -m "Research update: %DATESTR%" >> %LOGFILE% 2>&1
+git push research research:main >> %LOGFILE% 2>&1
+git checkout main >> %LOGFILE% 2>&1
+
 echo Finished: %DATE% %TIME% >> %LOGFILE%
