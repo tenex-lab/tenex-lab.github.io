@@ -15,6 +15,10 @@ echo =============================== >> %LOGFILE%
 echo Weekly FULL run started: %DATE% %TIME% >> %LOGFILE%
 echo =============================== >> %LOGFILE%
 
+:: Restore engine Python files (deleted when switching branches)
+echo Restoring engine files... >> %LOGFILE%
+git restore --source=engine -- run_daily.py run_all.py models/ backtest/ selector/ scripts/generate_site.py training_model.py >> %LOGFILE% 2>&1
+
 python run_all.py >> %LOGFILE% 2>&1
 python scripts\generate_site.py >> %LOGFILE% 2>&1
 git add registry/all_results.csv registry/champion.json registry/run_log.csv docs/index.html >> %LOGFILE% 2>&1
