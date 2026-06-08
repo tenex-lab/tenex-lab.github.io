@@ -32,4 +32,11 @@ git diff --cached --quiet || git commit -m "Engine update: %DATESTR%" >> %LOGFIL
 git push private engine:main >> %LOGFILE% 2>&1
 git checkout main >> %LOGFILE% 2>&1
 
+:: Push research code to research repo
+git checkout research >> %LOGFILE% 2>&1
+git add -A >> %LOGFILE% 2>&1
+git diff --cached --quiet || git commit -m "Research update: %DATESTR%" >> %LOGFILE% 2>&1
+git push research research:main >> %LOGFILE% 2>&1
+git checkout main >> %LOGFILE% 2>&1
+
 echo Finished: %DATE% %TIME% >> %LOGFILE%
