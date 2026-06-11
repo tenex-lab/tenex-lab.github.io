@@ -121,33 +121,32 @@
       sel.appendChild(opt);
     });
 
-    function buildDataset(combo, colorIdx) {
-      return {
-        label: combo.label,
-        data: combo.data.map(p => ({ x: p.x, y: p.y })),
-        borderColor: COLORS[colorIdx % COLORS.length],
-        backgroundColor: COLORS[colorIdx % COLORS.length] + '22',
-        borderWidth: combo.isChampion ? 3 : 2,
-        pointRadius: 5,
-        pointHoverRadius: 7,
-        tension: 0.3,
-        fill: false,
-      };
-    }
-
     function renderChart(idx) {
       const combo = ALL[idx];
-      const dataset = buildDataset(combo, idx);
+      const color = COLORS[idx % COLORS.length];
+      const labels = combo.data.map(p => p.x);
+      const values = combo.data.map(p => p.y);
       if (chart) chart.destroy();
       chart = new Chart(ctx, {
         type: 'line',
-        data: { datasets: [dataset] },
+        data: {
+          labels: labels,
+          datasets: [{
+            label: combo.label,
+            data: values,
+            borderColor: color,
+            backgroundColor: color + '22',
+            borderWidth: combo.isChampion ? 3 : 2,
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            tension: 0.3,
+            fill: false,
+          }]
+        },
         options: {
           responsive: true,
-          parsing: false,
           scales: {
             x: {
-              type: 'category',
               ticks: { color: '#8b949e', maxRotation: 45, font: { size: 11 } },
               grid: { color: '#21262d' },
             },
@@ -166,8 +165,7 @@
               titleColor: '#e6edf3',
               bodyColor: '#8b949e',
               callbacks: {
-                title: items => items[0].raw.x,
-                label: item => ' ROI: ' + item.raw.y.toFixed(4) + '%',
+                label: item => ' ROI: ' + item.raw.toFixed(4) + '%',
               }
             }
           }
@@ -285,7 +283,7 @@
   </div>
 
   <div class="footer">
-    Last updated: 2026-06-11 10:05 ET &nbsp;|&nbsp;
+    Last updated: 2026-06-11 10:18 ET &nbsp;|&nbsp;
     <a href="https://github.com/tenex-lab/tenex-lab.github.io" target="_blank">GitHub</a>
   </div>
 </body>
