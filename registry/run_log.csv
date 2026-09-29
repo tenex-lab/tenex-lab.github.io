@@ -105,3 +105,4 @@ run_ts,run_type,days_lookback,num_results,num_qualifying,top_model_id,top_versio
 2026-09-25T02:00:25,daily,45,32,1,rf_tp,4.1.7.1,TQQQ,0.0633618986808228
 2026-09-27T02:00:18,weekly,45,4960,384,rf_tp,4.1.7.1,TQQQ,0.1341431288788258
 2026-09-28T02:00:19,daily,45,35,5,rf_tp,4.1.7.1,TQQQ,0.1341431288788258
+2026-09-29T02:00:17,daily,45,35,5,rf_tp,4.1.7.1,TQQQ,0.1466959344531228
