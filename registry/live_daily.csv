@@ -61,4 +61,4 @@ date,symbol,round_trips,wins,win_rate_pct,gross_pct,fee_pct,net_pct,ended_flat,r
 2026-09-08,TQQQ,1,0,0.0,-0.2348,0.0055,-0.2403,yes,yes,no
 2026-09-15,TQQQ,30,9,30.0,-0.0758,0.0024,-0.0782,yes,yes,no
 2026-09-28,TQQQ,3,2,66.7,0.2801,0.0030,0.2771,yes,yes,no
-2026-10-01,TQQQ,2,2,100.0,0.2271,0.0000,0.2271,yes,no,no
+2026-10-01,TQQQ,2,2,100.0,0.2271,0.0040,0.2231,yes,yes,no
