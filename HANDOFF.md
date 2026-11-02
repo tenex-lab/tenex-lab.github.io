@@ -7,7 +7,6 @@
 아침 점검: 엔진 `C:\dev\TradingBot-engine\logs\daymode_YYYYMMDD_*.log` 에서 `40310000` 또는 "insufficient qty" 검색 — 나오면 같은 청산 거절 재발이니 바로 알림.
 해결: 라이브 주당 커미션 = 봇 시장가 주문 체결 주식 수 × $0.004 (OCO 익절·손절 청산은 무료, 수동 거래 제외) — 사용자 결정 10-26, 엔진 f084c97. 7일 검증에서 명세서와 일치. 일일 요약도 봇 종목만 집계.
 오늘 밤: 없음 — 열린 결정 없음. 로컬 CLAUDE.md 낡은 챔피언 줄 정리는 보류(세션 간 요청으로 CLAUDE.md 를 고치지 않음).
-막힘: 결정: 프로젝트 CLAUDE.md 에 "산출물은 OUTPUTS.md 에 한 줄씩" 규칙 추가 — 다른 세션 요청으로는 CLAUDE.md 를 고치지 않아 보류. 사용자가 한마디 하면 추가. (규칙 자체는 11-02부터 따름)
 더 볼 곳: 산출물 목록 `OUTPUTS.md` · 로컬 `WORKLOG.md`(작업 이력, gitignored) · `PROJECT.md` · 의도서 `C:\dev\_control-tower\intent\TradingBot.md` · 엔진 `C:\dev\TradingBot-engine`
 
 ---
