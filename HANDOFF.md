@@ -1,13 +1,14 @@
 # HANDOFF — TenEx 대시보드 (TradingBot 프로젝트 타워)
 
-갱신: 2026-10-26 · 주당 커미션 반영 완료(OCO 제외 기준)
+갱신: 2026-11-02 · 산출물 목록 OUTPUTS.md 신설 (총괄 타워 전달, 사용자 11-02 결정)
 상태: 일간·주간 실행 정상(10-15~10-26 에러 0, 대시보드 매일 푸시). 라이브는 10-21 이후 매일 하한선 미달로 쉬는 중. champion.json 고정은 설계대로(역대 기록, 라이브는 최신 리더보드 1위를 따름) — 문제 아님.
 다음: 총괄 타워가 보내는 일 처리. 매매·주문·계좌·위험 한도는 건드리지 않음.
 해결: 10-20 청산 거절 건 — 사용자 확인 결과 포지션 청산됨, 라이브 유지(10-26). 엔진·설정 변경 없음.
 아침 점검: 엔진 `C:\dev\TradingBot-engine\logs\daymode_YYYYMMDD_*.log` 에서 `40310000` 또는 "insufficient qty" 검색 — 나오면 같은 청산 거절 재발이니 바로 알림.
 해결: 라이브 주당 커미션 = 봇 시장가 주문 체결 주식 수 × $0.004 (OCO 익절·손절 청산은 무료, 수동 거래 제외) — 사용자 결정 10-26, 엔진 f084c97. 7일 검증에서 명세서와 일치. 일일 요약도 봇 종목만 집계.
 오늘 밤: 없음 — 열린 결정 없음. 로컬 CLAUDE.md 낡은 챔피언 줄 정리는 보류(세션 간 요청으로 CLAUDE.md 를 고치지 않음).
-더 볼 곳: 로컬 `WORKLOG.md`(작업 이력, gitignored) · `PROJECT.md` · 의도서 `C:\dev\_control-tower\intent\TradingBot.md` · 엔진 `C:\dev\TradingBot-engine`
+막힘: 결정: 프로젝트 CLAUDE.md 에 "산출물은 OUTPUTS.md 에 한 줄씩" 규칙 추가 — 다른 세션 요청으로는 CLAUDE.md 를 고치지 않아 보류. 사용자가 한마디 하면 추가. (규칙 자체는 11-02부터 따름)
+더 볼 곳: 산출물 목록 `OUTPUTS.md` · 로컬 `WORKLOG.md`(작업 이력, gitignored) · `PROJECT.md` · 의도서 `C:\dev\_control-tower\intent\TradingBot.md` · 엔진 `C:\dev\TradingBot-engine`
 
 ---
 
